@@ -1,0 +1,14 @@
+version: '3'
+services:
+  bot:
+    build:
+      context: .
+    environment:
+      - API_ID=your_api_id
+      - API_HASH=your_api_hash
+      - TOKEN=your_bot_token
+      - OWNER_ID=your_owner_id
+      - SUDO_IDS=comma_separated_sudo_ids
+    volumes:
+      - ./data:/app/data
+    command: python main.py
